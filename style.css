@@ -1,0 +1,256 @@
+:root {
+  --Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --Dark-Blue: hsl(214, 17%, 51%);
+  --Grayish-Blue: hsl(212, 23%, 69%);
+  --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background: var(--Light-Grayish-Blue);
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+}
+
+.container {
+    width: 80%;
+    margin: 4rem auto;
+    overflow: hidden;
+    background: white;
+    border-radius: 10px;
+    position: relative;
+}
+
+.right {
+    padding: 1rem;
+}
+
+.right p:first-child {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 0.1px;
+    color: #212121;
+}
+
+.right p {
+    color: var(--Dark-Blue);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.name_date p {
+    margin: 0;
+}
+
+.avatar {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.profile .share_icon {
+    width: 50px;
+    border-radius: 50%;
+    padding: 1rem;
+    border: none;
+    background: var(--Light-Grayish-Blue);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    z-index: 2;
+}
+
+.arrow:hover,
+.fill:hover {
+    transform: scale(1.2);
+}
+
+.share {
+    background: var(--Dark-Grayish-Blue);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.show.share {
+    opacity: 1;
+}
+
+.share p {
+    margin-right: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--Grayish-Blue);
+}
+
+.share img {
+    width: 20px;
+    margin-right: .5rem;
+}   
+
+.attribution {
+    font-size: 10px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+
+@media screen and (min-width:400px) {
+    .right p:first-child {
+        font-size: 19px;
+        font-weight: bold;
+        line-height: 1.5;
+        letter-spacing: 0.1px;
+    }
+    .right p {
+        font-size: 16.2px;
+    }
+    .profile {
+        justify-content: flex-start;
+    }
+    .profile .share_icon {
+        position: absolute;
+        bottom: 18px;
+        right: 20px;
+    }
+    .share p {
+        font-size: 15px;
+    }
+    .share img {
+        width: 25px;
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    body {
+        position: relative;
+    }
+    .container {
+        margin: 15rem auto 10rem auto;
+        display: flex;
+        position: static;
+    }
+    .drawer {
+        width: 400px;
+    }
+    .right {
+        padding: 1rem 2rem;
+    }
+    .right p:first-child {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1.5;
+        letter-spacing: 0.1px;
+    }
+    .right p {
+        font-size: 13.5px;
+    }
+    .profile .share_icon {
+        position: absolute;
+        bottom: 190px;
+        right: 130px;
+    }
+    .share {
+        background: var(--Dark-Grayish-Blue);
+        padding: 0.5rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 250px;
+        height: auto;
+        bottom: 270px;
+        right: 40px;
+        border-radius: 10px;
+    }
+    .share::after {
+        content: '';
+        border: 10px solid ;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: rotate(180deg);
+        border-top: 10px solid ;
+        border-right: 10px solid ;
+        border-bottom: 10px solid var(--Dark-Grayish-Blue);
+        border-left: 10px solid ;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .container {
+        width: 70%;
+        margin: 10rem auto;
+    }
+    .right {
+        padding: 1rem 3rem;
+    }
+    .profile .share_icon {
+        bottom: 190px;
+        right: 230px;
+    }
+    .share {
+        bottom: 270px;
+        right: 140px;
+    }
+}
+
+
+@media screen and (min-width:1400px) {
+    .container {
+        margin: 10rem auto 10rem auto;
+        display: flex;
+        position: static;
+    }
+    .right {
+        padding: 1rem 2rem;
+    }
+    .right p:first-child {
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 1.2;
+        letter-spacing: 0.1px;
+    }
+    .right p {
+        font-size: 20px;
+        line-height: 1.3;
+    }
+    .profile {
+        margin-bottom: 1rem;
+    }
+    .profile .share_icon {
+        bottom: 200px;
+        right: 250px;
+    }
+    .share {
+        bottom: 280px;
+        right: 160px;
+    }
+}
